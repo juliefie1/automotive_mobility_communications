@@ -1,0 +1,34 @@
+//--------------------------------------------------------------------------------------------------
+/**
+ * Periodic sensor component. Simplifies the implementation of a periodic sensor that is connected
+ * to and controlled by the Data Hub.
+ *
+ * Copyright (C) Sierra Wireless Inc.
+ */
+//--------------------------------------------------------------------------------------------------
+
+cflags:
+{
+    -std=c99
+}
+
+provides:
+{
+    headerDir:
+    {
+        ${CURDIR}
+    }
+}
+
+requires:
+{
+    api:
+    {
+        dhubIO = io.api
+    }
+}
+
+sources:
+{
+    periodicSensor.c
+}

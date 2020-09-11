@@ -1,0 +1,9 @@
+sources:
+{
+    argosPublisher.c
+    previpass.c
+    previpass_util.c
+    mangOH_Kim1.c
+    gpslib.c
+}
+
