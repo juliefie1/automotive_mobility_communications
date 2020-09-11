@@ -1,0 +1,20 @@
+requires:
+{
+    api:
+    {
+        dhubIO = io.api
+        modemServices/le_mrc.api
+    }
+
+    component:
+    {
+        ../../fileUtils
+        $CURDIR/../imu/periodicSensor
+    }
+}
+
+sources:
+{
+     signalQuality.c
+}
+

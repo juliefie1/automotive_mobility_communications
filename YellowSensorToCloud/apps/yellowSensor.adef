@@ -1,0 +1,40 @@
+start: manual
+
+executables:
+{
+    yellowSensor = ( $CURDIR/../components/sensors/imu
+                     $CURDIR/../components/sensors/position
+                     $CURDIR/../components/sensors/signalQuality )
+}
+
+processes:
+{
+    run:
+    {
+        ( yellowSensor )
+    }
+
+    envVars:
+    {
+	LE_LOG_LEVEL = DEBUG
+    }
+}
+
+extern:
+{
+    yellowSensor.periodicSensor.dhubIO
+    yellowSensor.imu.imu
+    yellowSensor.imu.temperature
+}
+
+
+bindings:
+{ 
+    yellowSensor.imu.dhubIO -> dataHub.io
+    yellowSensor.periodicSensor.dhubIO -> dataHub.io
+    yellowSensor.position.le_pos -> positioningService.le_pos
+    yellowSensor.position.le_posCtrl -> positioningService.le_posCtrl
+    yellowSensor.position.dhubIO -> dataHub.io
+    yellowSensor.signalQuality.dhubIO -> dataHub.io
+    yellowSensor.signalQuality.le_mrc -> modemService.le_mrc
+}
