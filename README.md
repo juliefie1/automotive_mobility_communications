@@ -16,11 +16,11 @@ Legato offers a workspace manager, [Leaf](https://docs.legato.io/latest/confLeaf
 To know more about Kinéis' system, please ask them for more information.
 
 ## YellowSensorToCloud
-Components and applications interacting with sensors on the mangOH Red, WP77XX, and pushing data to Sierra Wireless's cloud service, Airvantage. 
+Components and applications interacting with sensors on the mangOH Yellow, WP77XX, and pushing data to Sierra Wireless's cloud service, Airvantage. 
 Same mechanism as the RedSensorToCloud package, but adapted to the mangOH Yellow board. More sensors can be added in the components/sensors file to be sent to the Data Hub. 
 The two applications (.adef files) are : 
-- redSensor: Collects data from the mangOH Yellow's imu and position sensors and sends it to the Legato Data Hub. Also sends the cellular signal quality to the Data Hub.
-- redCloud: Takes data from the Data Hub and pushes it to AirVantage.
+- yellowSensor: Collects data from the mangOH Yellow's imu and position sensors and sends it to the Legato Data Hub. Also sends the cellular signal quality to the Data Hub.
+- yellowCloud: Takes data from the Data Hub and pushes it to AirVantage.
 
 ## RedSensorToCloud
 Based on the [classic package](https://github.com/mangOH/RedSensorToCloud), to which is added the system for sending data to ArgosWeb (Kinéis’ cloud).
